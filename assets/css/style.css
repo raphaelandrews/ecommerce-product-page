@@ -38,6 +38,7 @@ nav {
     max-width: 400px;
     height: 100vh;
     background-color: var(--white);
+    z-index: 2;
 }
 
 .navbar-close {
@@ -59,6 +60,81 @@ nav {
     color: hsl(228, 45%, 44%);
 }
 
+.carousel {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: .15rem;
+    border-radius: 50%;
+    background-color: var(--white);
+    background-image: none;
+}
+
+.carousel-control-next-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: .15rem;
+    border-radius: 50%;
+    background-color: var(--white);
+    background-image: none;
+}
+
+.prev-icon,
+.next-icon {
+    width: .5rem;
+}
+
+.carousel-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.carousel-product {
+    color: var(--orange);
+}
+
+.carousel-price {
+    font-size: 1.5rem;
+}
+
+.carousel-discount {
+    background-color: var(--orange-alt);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .25rem .5rem;
+}
+
+.carousel-original-price {
+    font-size: 1.25rem;
+    color: var(--grayish-blue);
+    text-decoration-line: line-through;
+}
+
+.carousel-text {
+    color: var(--dark-grayish-blue);
+}
+
+.carousel-indicators {
+    position: inherit;
+}
+
+.product-slider {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 1rem;
+}
+
 /*=============== RESPONSIVE ===============*/
 @media screen and (min-width: 992px) {
     nav {
@@ -66,6 +142,11 @@ nav {
         padding: 0px !important;
         border-bottom: 2px solid var(--light-grayish-blue);
     }
+
+    main {
+        padding: 4rem;
+    }
+
     .navbar-nav {
         gap: 1rem;
         height: 100%;
@@ -106,7 +187,25 @@ nav {
     .nav__avatar {
         width: 3rem;
     }
-/*
+
+    .carousel {
+        justify-items: center;
+    }
+
+    .carousel,
+    .carousel-content {
+        margin: 0;
+    }
+
+    .carousel-inner {
+        border-radius: 1rem;
+    }
+    
+    .product {
+        max-width: 1120px;
+    }
+
+    /*
     .navbar-user {
         gap: 3rem !important;
     }*/

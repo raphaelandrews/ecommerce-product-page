@@ -135,6 +135,21 @@ nav {
     border-radius: 1rem;
 }
 
+.product-count {
+    border-radius: 1rem;
+    background-color: var(--light-grayish-blue);
+}
+
+.product-btn {
+    border-radius: 1rem;
+    background-color: var(--orange);
+   
+}
+
+.product-cart {
+    width: 1.25rem;
+}
+
 /*=============== RESPONSIVE ===============*/
 @media screen and (min-width: 992px) {
     nav {

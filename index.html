@@ -27,7 +27,10 @@
           <a class="navbar-brand" href="./index.html">sneakers</a>
         </div>
         <div class="navbar-user d-flex justify-content-center align-items-center gap-4 gap-lg-5">
-          <img src="./assets/img/icon-cart.svg" alt="Shopping Cart" class="nav__cart">
+          <button type="button" class="btn border-0 p-0 position-relative">
+            <img src="./assets/img/icon-cart.svg" alt="Shopping Cart" class="nav__cart">
+            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-4">0<span class="visually-hidden">unread messages</span></span>
+          </button>
           <img src="./assets/img/image-avatar.png" alt="Avatar" class="nav__avatar">
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -128,9 +131,11 @@
         </div>
         <div>
           <div class="product-count d-flex align-items-center justify-content-between mb-3 p-3">
-            <button type="button" class="btn border-0" onclick="totalClick(-1)"><img src="./assets/img/icon-minus.svg" alt=""></button>
-            <span id="totalClicks" class="fw-bold">0</span>
-            <button type="button" class="btn border-0" onclick="totalClick(1)"><img src="./assets/img/icon-plus.svg" alt=""></button>
+            <button type="button" class="btn border-0" onclick="totalProduct(-1)"><img src="./assets/img/icon-minus.svg"
+                alt=""></button>
+            <span id="totalProducts" class="fw-bold">0</span>
+            <button type="button" class="btn border-0" onclick="totalProduct(1)"><img src="./assets/img/icon-plus.svg"
+                alt=""></button>
           </div>
           <button type="button"
             class="product-btn btn d-flex align-items-center justify-content-center gap-4 text-white fw-bold w-100 p-3 border-0">

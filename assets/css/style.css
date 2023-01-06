@@ -143,11 +143,22 @@ nav {
 .product-btn {
     border-radius: 1rem;
     background-color: var(--orange);
-   
+}
+
+.product-btn:hover {
+    background-color: var(--orange-hover);
+}
+
+.product-btn:active {
+    background-color: var(--orange-hover) !important;
 }
 
 .product-cart {
     width: 1.25rem;
+}
+
+.cart-count { 
+      background-color: var(--orange);
 }
 
 /*=============== RESPONSIVE ===============*/

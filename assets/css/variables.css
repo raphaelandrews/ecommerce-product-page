@@ -14,6 +14,7 @@
     --white: hsl(0, 0%, 100%);
     --black: hsla(0, 0%, 0%, .75);
     --orange: hsl(25, 82%, 57%);
+    --orange-hover: hsl(25, 82%, 63%);
     --orange-alt: hsla(25, 82%, 57%, .5);
 }
 

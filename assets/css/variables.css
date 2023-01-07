@@ -2,6 +2,8 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
+    --header-height: 6rem;
+
     /*========== Font and typography ==========*/
     --font: 'Kumbh Sans', sans-serif;
 

@@ -1,5 +1,5 @@
 nav {
-    min-height: 96px;
+    min-height: var(--header-height);
 }
 
 .navbar-toggler {
@@ -11,7 +11,7 @@ nav {
     font-weight: var(--font-bold);
 }
 
-.nav__cart {
+.nav-cart {
     width: 1.5rem;
 }
 
@@ -19,7 +19,7 @@ nav {
     width: 1.75rem;
 }
 
-.nav__cart:hover,
+.nav-cart:hover,
 .nav__avatar:hover {
     cursor: pointer;
 }
@@ -178,7 +178,9 @@ nav {
 }
 
 .card {
-    top: 20px;
+    top: calc(var(--header-height) + 2.5rem);
+    left: 50%;
+    transform: translate(-50%);
     width: 90%;
     max-width: 350px;
 }
@@ -266,6 +268,15 @@ nav {
 
     .product {
         max-width: 1120px;
+    }
+
+    .card {
+        position: absolute !important;
+        top: 2.5rem;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90%;
+        min-width: 350px;
     }
 
     /*

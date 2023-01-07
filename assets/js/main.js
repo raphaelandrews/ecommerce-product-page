@@ -11,20 +11,21 @@ let count_value = 0;
 productBtn.addEventListener('click', onSubmit);
 
 const cartState = {
-    'empty': `<p class="fw-bold text-center m-0">Your cart is empty.</p>`,
-    'full': `<div class="d-flex">
-                <img src="./assets/img/image-product-1-thumbnail.jpg" class="d-block w-100 main-img" alt="...">
+    'empty': `<div class="p-5"><p class="fw-bold text-center m-0">Your cart is empty.</p></div>`,
+    'full': `<div class="d-flex align-items-center justify-content-between mb-4">
+                <img src="./assets/img/image-product-1-thumbnail.jpg" class="card-img d-block" alt="...">
                 <div>
                     <h5 class="card-title">${productTitle.textContent}</h5>
                     <div>
                         <span>${"$" + carouselPrice.textContent.slice(1)}</span>
                         <span>x</span>
                         <span class="product-quantity"></span>
-                        <span class="product-total"></span>
+                        <span class="product-total fw-bold"></span>
                     </div>
                 </div>
+                <img src="./assets/img/icon-delete.svg" >
             </div>
-    <a href="#" class="btn btn-primary w-100">Checkout</a>`
+    <a href="#" class="card-btn btn w-100 fw-bold">Checkout</a>`
 }
 
 /*=== Product Count ===*/
@@ -65,8 +66,6 @@ function defineCartState(count) {
         const product_quantity = document.querySelector(".product-quantity");
         const product_total = document.querySelector(".product-total");
         product_quantity.innerHTML = count.textContent;
-        product_total.innerHTML = parseInt(carouselPriceContent.slice(1)) * parseInt(product_quantity.textContent);
+        product_total.innerHTML = "$" + parseInt(carouselPriceContent.slice(1)) * parseInt(product_quantity.textContent) + ".00";
     }
 }
-
-

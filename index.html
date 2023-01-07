@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | E-commerce product page</title>
@@ -19,38 +19,45 @@
     <nav class="container navbar navbar-expand-lg bg-white">
       <div class="container-fluid">
         <div class="d-flex justify-content-center align-items-center gap-1">
-          <button class="navbar-toggler pt-0 pb-0" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
+          <button class="navbar-toggler pt-0 pb-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             <img src="./assets/img/icon-menu.svg">
           </button>
           <a class="navbar-brand" href="./index.html">sneakers</a>
         </div>
         <div class="navbar-user position-relative d-flex justify-content-center align-items-center gap-4 gap-lg-5">
-          <div>
-          <button type="button" class="btn border-0 p-0 position-relative">
-            <img src="./assets/img/icon-cart.svg" alt="Shopping Cart" class="nav-cart">
-            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-4">0</span>
-            <div class="card d-none position-fixed end-lg-0 border-0 shadow z-2">
+          <div class="position-relative">
+            <button type="button" class="btn border-0 p-0" onclick="toggleCart()">
+              <svg class="nav-cart" width="22" height="20" fill="var(--dark-grayish-blue)" xmlns="http://www.w3.org/2000/svg">
+                <path class="st0" d="M20.9,3.6H3.9L3.6,0.8C3.6,0.4,3.2,0,2.7,0H0.9C0.4,0,0,0.4,0,0.9s0.4,0.9,0.9,0.9h1l1,11.5
+                	C3,14.1,3.4,15,4.2,15.6C2.8,17.4,4.1,20,6.4,20c1.9,0,3.2-1.9,2.6-3.6h4.9c-0.6,1.8,0.7,3.6,2.6,3.6c1.5,0,2.7-1.2,2.7-2.7
+                	c0-1.5-1.2-2.7-2.7-2.7h-10c-0.7,0-1.3-0.4-1.5-1l14.3-0.8c0.4,0,0.7-0.3,0.8-0.7l1.8-7.3c0.1-0.5-0.2-1-0.7-1.1
+                	C21.1,3.6,21,3.6,20.9,3.6L20.9,3.6z M6.4,18.2c-0.5,0-0.9-0.5-0.9-1c0-0.5,0.4-0.9,0.9-0.9c0.5,0,0.9,0.5,0.9,1
+                	C7.2,17.8,6.8,18.2,6.4,18.2z M16.4,18.2c-0.5,0-0.9-0.5-0.9-1c0-0.5,0.4-0.9,0.9-0.9c0.5,0,0.9,0.5,0.9,1
+                	C17.2,17.8,16.9,18.2,16.4,18.2z M18.4,11L4.6,11.8L4,5.4h15.8L18.4,11L18.4,11z" />
+              </svg>
+              <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-4">0</span>
+
+            </button>
+            <div class="card position-fixed end-lg-0 border-0 shadow z-2">
               <div class="card-header text-start fw-bold bg-white p-3">
                 Cart
               </div>
               <div class="card-body p-4"></div>
             </div>
-          </button>
-        </div>
+          </div>
           <img src="./assets/img/image-avatar.png" alt="Avatar" class="nav__avatar">
         </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="offcanvas offcanvas-start offcanvas-nav" tabindex="-1" id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel">
           <img src="./assets/img/icon-close.svg" class="navbar-close" alt="Icon Close" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          <ul class="navbar-nav fw-bold me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Collections</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Men</a>
+              <a class="nav-link fw-regular" href="#">Men</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Women</a>
@@ -67,18 +74,9 @@
     </nav>
   </header>
 
-  <!--<div class="container card-container position-relative d-none justify-content-center">
-    <div class="card position-absolute end-lg-0 border-0 shadow z-2">
-      <div class="card-header fw-bold bg-white p-3">
-        Cart
-      </div>
-      <div class="card-body p-4"></div>
-    </div>
-  </div>-->
-
   <main>
     <section class="product my-0 mx-auto d-lg-flex align-items-center justify-content-between">
-      <div id="carouselExampleIndicators" class="carousel slide d-lg-grid gap-lg-5">
+      <div id="carouselExampleIndicators" class="carousel slide d-lg-grid gap-lg-4">
         <div class="carousel-inner">
           <div class="carousel-item active p-lg-0">
             <img src="./assets/img/image-product-1.jpg" class="d-block w-100 main-img" alt="...">
@@ -135,23 +133,23 @@
       </div>
       <div class="carousel-content p-4">
         <div class="carousel-product fw-bold mb-3">SNEAKER COMPANY</div>
-        <h2 class="product-title fw-bold mb-3">Fall Limited Edition Sneakers</h2>
-        <p class="carousel-text mb-5">These low-profile sneakers are your perfect casual wear companion. Featuring a
+        <h2 class="product-title fw-bold mb-3 mb-lg-5">Fall Limited Edition Sneakers</h2>
+        <p class="carousel-text mb-4">These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
-        <div class="d-flex flex-lg-column align-items-center align-items-lg-start justify-content-between">
+        <div class="d-flex flex-lg-column align-items-center align-items-lg-start justify-content-between mb-4 mb-lg-5">
           <div class="d-flex align-items-center gap-3">
             <div class="carousel-price fw-bold">$125.00</div>
             <div class="carousel-discount fw-bold">50%</div>
           </div>
           <div class="carousel-original-price fw-bold">$250</div>
         </div>
-        <div>
-          <div class="product-count d-flex align-items-center justify-content-between mb-3 p-3">
-            <button type="button" class="btn border-0" onclick="totalProduct(-1)"><img src="./assets/img/icon-minus.svg"
+        <div class="d-lg-flex align-items-center gap-3">
+          <div class="product-count d-flex align-items-center justify-content-between gap-lg-5 mb-3 mb-lg-0 p-3">
+            <button type="button" class="total-btn btn border-0 py-0 p-lg-0" onclick="totalProduct(-1)"><img src="./assets/img/icon-minus.svg"
                 alt=""></button>
-            <span id="totalProducts" class="fw-bold">0</span>
-            <button type="button" class="btn border-0" onclick="totalProduct(1)"><img src="./assets/img/icon-plus.svg"
+            <span id="totalProducts" class="total-products fw-bold">0</span>
+            <button type="button" class="total-btn btn border-0 py-0 p-lg-0" onclick="totalProduct(1)"><img src="./assets/img/icon-plus.svg"
                 alt=""></button>
           </div>
           <button type="button"
@@ -169,11 +167,11 @@
         </div>
       </div>
     </section>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/raphaelandrews">Raphael Andrews</a>.
-    </div>
   </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/raphaelandrews">Raphael Andrews</a>.
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>

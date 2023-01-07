@@ -12,21 +12,23 @@ let count_value = 0;
 productBtn.addEventListener('click', onSubmit);
 
 const cartState = {
-    'empty': `<div class="p-5"><p class="fw-bold text-center m-0">Your cart is empty.</p></div>`,
+    'empty': `<div class="p-5"><p class="cart-empty fw-bold text-center m-0">Your cart is empty.</p></div>`,
     'full': `<div class="d-flex align-items-center justify-content-between mb-4">
                 <img src="./assets/img/image-product-1-thumbnail.jpg" class="card-img d-block" alt="...">
                 <div class="text-start">
                     <h5 class="card-title">${productTitle.textContent}</h5>
                     <div>
-                        <span>${"$" + carouselPrice.textContent.slice(1)}</span>
-                        <span>x</span>
+                        <span class="product-price">${"$" + carouselPrice.textContent.slice(1)}</span>
+                        <span class="product-x">x</span>
                         <span class="product-quantity"></span>
-                        <span class="product-total fw-bold"></span>
+                        <span class="product-total fw-bold ms-1"></span>
                     </div>
                 </div>
-                <img src="./assets/img/icon-delete.svg" class="card-delete" onclick="deleteProducts()">
+                <button class="btn p-0">
+                    <img src="./assets/img/icon-delete.svg" class="card-delete" onclick="deleteProducts()">
+                </button>
             </div>
-    <a href="#" class="card-btn btn w-100 fw-bold">Checkout</a>`
+    <a href="#" class="card-btn btn text-white fw-bold w-100 p-3 border-0">Checkout</a>`
 }
 
 /*=== Product Count ===*/
@@ -43,8 +45,6 @@ function totalProduct(click) {
 function onSubmit() {
     count.textContent = parseInt(totalProducts.innerText) + parseInt(count.textContent);
     totalProducts.innerText = 0;
-   /* cardContainer.setAttribute('style', 'display:flex !important');*/
-   card.setAttribute('style', 'display:flex !important');
     checkCountValue();
     defineCartState(count);
 }
@@ -75,3 +75,23 @@ function deleteProducts() {
     defineCartState(count);
     checkCountValue();
 }
+
+function toggleCart() {
+    defineCartState(count);
+    if (card.style.display === "flex") {
+        card.setAttribute('style', 'display: none !important');
+    } else {
+        card.setAttribute('style', 'display: flex !important');
+    }
+}
+
+/*function checkCard() {
+    window.addEventListener('click', function (e) {
+        if (card.contains(e.target)) {
+            console.log("click");
+        } else {
+            card.style.display = "none";
+        }
+    });
+}*/
+

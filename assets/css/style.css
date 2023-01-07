@@ -161,6 +161,11 @@ nav {
       background-color: var(--orange);
 }
 
+.card {
+    top: 20px;
+    width: 90%;
+}
+
 /*=============== RESPONSIVE ===============*/
 @media screen and (min-width: 992px) {
     nav {

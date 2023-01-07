@@ -26,10 +26,10 @@
           </button>
           <a class="navbar-brand" href="./index.html">sneakers</a>
         </div>
-        <div class="navbar-user d-flex justify-content-center align-items-center gap-4 gap-lg-5">
+        <div class="navbar-user position-relative d-flex justify-content-center align-items-center gap-4 gap-lg-5">
           <button type="button" class="btn border-0 p-0 position-relative">
             <img src="./assets/img/icon-cart.svg" alt="Shopping Cart" class="nav__cart">
-            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-4">0<span class="visually-hidden">unread messages</span></span>
+            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-4">0</span>
           </button>
           <img src="./assets/img/image-avatar.png" alt="Avatar" class="nav__avatar">
         </div>
@@ -58,6 +58,17 @@
       </div>
     </nav>
   </header>
+
+  <div class="container card-container position-relative d-none justify-content-center">
+    <div class="card position-absolute end-lg-0 border-0 shadow z-2">
+      <div class="card-header fw-bold bg-white p-3">
+        Cart
+      </div>
+      <div class="card-body p-5">
+        
+      </div>
+    </div>
+  </div>
 
   <main>
     <section class="product my-0 mx-auto d-lg-flex align-items-center justify-content-between">
@@ -118,7 +129,7 @@
       </div>
       <div class="carousel-content p-4">
         <div class="carousel-product fw-bold mb-3">SNEAKER COMPANY</div>
-        <h2 class="fw-bold mb-3">Fall Limited Edition Sneakers</h2>
+        <h2 class="product-title fw-bold mb-3">Fall Limited Edition Sneakers</h2>
         <p class="carousel-text mb-5">These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
@@ -138,6 +149,7 @@
                 alt=""></button>
           </div>
           <button type="button"
+       
             class="product-btn btn d-flex align-items-center justify-content-center gap-4 text-white fw-bold w-100 p-3 border-0">
             <svg width="22" height="20" fill="var(--white)" xmlns="http://www.w3.org/2000/svg">
               <path class="st0" d="M20.9,3.6H3.9L3.6,0.8C3.6,0.4,3.2,0,2.7,0H0.9C0.4,0,0,0.4,0,0.9s0.4,0.9,0.9,0.9h1l1,11.5
@@ -147,7 +159,7 @@
               	C7.2,17.8,6.8,18.2,6.4,18.2z M16.4,18.2c-0.5,0-0.9-0.5-0.9-1c0-0.5,0.4-0.9,0.9-0.9c0.5,0,0.9,0.5,0.9,1
               	C17.2,17.8,16.9,18.2,16.4,18.2z M18.4,11L4.6,11.8L4,5.4h15.8L18.4,11L18.4,11z" />
             </svg>
-            <p class="m-0">Add to cartd</p>
+            <p class="m-0">Add to cart</p>
           </button>
         </div>
       </div>

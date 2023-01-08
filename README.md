@@ -5,7 +5,7 @@
 
 <div align="center">
   <a href="https://gama.academy">
-    <img src="./assets/img/logo.png" alt="Logo" width="80" height="80">
+    <img src="./src/assets/img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">E-commerce product page</h3>  
@@ -23,7 +23,7 @@
 
 ## :open_file_folder: About the Project
  <p align="center">
-  <img src="./assets/img/desktop-preview.jpg" alt="Project Preview" width="500px" height="367px">
+  <img src="./src/assets/img/desktop-preview.jpg" alt="Project Preview" width="500px" height="367px">
 
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 </p>

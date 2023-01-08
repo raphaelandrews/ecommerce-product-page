@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/variables.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/assets/css/variables.css">
+  <link rel="stylesheet" href="./src/assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/img/favicon-32x32.png">
 
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
@@ -20,7 +20,7 @@
         <div class="d-flex justify-content-center align-items-center gap-1">
           <button class="navbar-toggler pt-0 pb-0" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <img src="./assets/img/icon-menu.svg">
+            <img src="./src/assets/img/icon-menu.svg">
           </button>
           <a class="navbar-brand" href="./index.html">sneakers</a>
         </div>
@@ -46,11 +46,11 @@
               <div class="card-body p-4"></div>
             </div>
           </div>
-          <img src="./assets/img/image-avatar.png" alt="Avatar" class="nav__avatar">
+          <img src="./src/assets/img/image-avatar.png" alt="Avatar" class="nav__avatar">
         </div>
         <div class="offcanvas offcanvas-start offcanvas-nav" tabindex="-1" id="offcanvasExample"
           aria-labelledby="offcanvasExampleLabel">
-          <img src="./assets/img/icon-close.svg" class="navbar-close" alt="Icon Close" type="button"
+          <img src="./src/assets/img/icon-close.svg" class="navbar-close" alt="Icon Close" type="button"
             data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
           <ul class="navbar-nav fw-bold me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -77,42 +77,42 @@
   <main>
     <section class="product my-0 mx-auto d-lg-flex align-items-center justify-content-between">
       <div id="carouselExampleIndicators" class="carousel slide d-lg-grid gap-lg-4">
-        <div class="carousel-inner">
+        <div class="carousel-inner" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <div class="carousel-item active p-lg-0">
-            <img src="./assets/img/image-product-1.jpg" class="d-block w-100 main-img" alt="...">
+            <img src="./src/assets/img/image-product-1.jpg" class="d-block w-100 main-img" alt="...">
           </div>
           <div class="carousel-item p-lg-0">
-            <img src="./assets/img/image-product-2.jpg" class="d-block w-100 main-img" alt="...">
+            <img src="./src/assets/img/image-product-2.jpg" class="d-block w-100 main-img" alt="...">
           </div>
           <div class="carousel-item p-lg-0">
-            <img src="./assets/img/image-product-3.jpg" class="d-block w-100 main-img" alt="...">
+            <img src="./src/assets/img/image-product-3.jpg" class="d-block w-100 main-img" alt="...">
           </div>
           <div class="carousel-item p-lg-0">
-            <img src="./assets/img/image-product-4.jpg" class="d-block w-100 main-img" alt="...">
+            <img src="./src/assets/img/image-product-4.jpg" class="d-block w-100 main-img" alt="...">
           </div>
         </div>
         <div class="carousel-indicators">
-          <img src="./assets/img/image-product-1-thumbnail.jpg" data-bs-target="#carouselExampleIndicators"
+          <img src="./src/assets/img/image-product-1-thumbnail.jpg" data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="0" class="active col d-none d-lg-block product-slider" aria-current="true"
             aria-label="Slide 1">
-          <img src="./assets/img/image-product-2-thumbnail.jpg" data-bs-target="#carouselExampleIndicators"
+          <img src="./src/assets/img/image-product-2-thumbnail.jpg" data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="1" class="col d-none d-lg-block product-slider" aria-label="Slide 2">
-          <img src="./assets/img/image-product-3-thumbnail.jpg" data-bs-target="#carouselExampleIndicators"
+          <img src="./src/assets/img/image-product-3-thumbnail.jpg" data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="2" class="col d-none d-lg-block product-slider" aria-label="Slide 3">
-          <img src="./assets/img/image-product-4-thumbnail.jpg" data-bs-target="#carouselExampleIndicators"
+          <img src="./src/assets/img/image-product-4-thumbnail.jpg" data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="3" class="col d-none d-lg-block product-slider" aria-label="Slide 4">
         </div>
         <button class="carousel-control-prev d-lg-none" type="button" data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true">
-            <img src="./assets/img/icon-previous.svg" alt="" class="prev-icon">
+            <img src="./src/assets/img/icon-previous.svg" alt="" class="prev-icon">
           </span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next d-lg-none" type="button" data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true">
-            <img src="./assets/img/icon-next.svg" alt="" class="next-icon">
+            <img src="./src/assets/img/icon-next.svg" alt="" class="next-icon">
           </span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -133,10 +133,10 @@
         <div class="d-lg-flex align-items-center gap-3">
           <div class="product-count d-flex align-items-center justify-content-between gap-lg-5 mb-3 mb-lg-0 p-3">
             <button type="button" class="total-btn btn border-0 py-0 p-lg-0" onclick="totalProduct(-1)"><img
-                src="./assets/img/icon-minus.svg" alt=""></button>
+                src="./src/assets/img/icon-minus.svg" alt=""></button>
             <span id="totalProducts" class="total-products fw-bold">0</span>
             <button type="button" class="total-btn btn border-0 py-0 p-lg-0" onclick="totalProduct(1)"><img
-                src="./assets/img/icon-plus.svg" alt=""></button>
+                src="./src/assets/img/icon-plus.svg" alt=""></button>
           </div>
           <button type="button"
             class="product-btn btn d-flex align-items-center justify-content-center gap-4 text-white fw-bold w-100 p-3 border-0">
@@ -153,6 +153,63 @@
         </div>
       </div>
     </section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div id="carouselIndicators" class="carousel slide d-lg-grid gap-lg-4">
+            <div class="carousel-inner">
+              <div class="carousel-item active p-lg-0">
+                <img src="./src/assets/img/image-product-1.jpg" class="d-block w-100 main-img" alt="...">
+              </div>
+              <div class="carousel-item p-lg-0">
+                <img src="./src/assets/img/image-product-2.jpg" class="d-block w-100 main-img" alt="...">
+              </div>
+              <div class="carousel-item p-lg-0">
+                <img src="./src/assets/img/image-product-3.jpg" class="d-block w-100 main-img" alt="...">
+              </div>
+              <div class="carousel-item p-lg-0">
+                <img src="./src/assets/img/image-product-4.jpg" class="d-block w-100 main-img" alt="...">
+              </div>
+            </div>
+            <div class="carousel-indicators">
+              <img src="./src/assets/img/image-product-1-thumbnail.jpg" data-bs-target="#carouselIndicators"
+                data-bs-slide-to="0" class="active col d-none d-lg-block product-slider" aria-current="true"
+                aria-label="Slide 1">
+              <img src="./src/assets/img/image-product-2-thumbnail.jpg" data-bs-target="#carouselIndicators"
+                data-bs-slide-to="1" class="col d-none d-lg-block product-slider" aria-label="Slide 2">
+              <img src="./src/assets/img/image-product-3-thumbnail.jpg" data-bs-target="#carouselIndicators"
+                data-bs-slide-to="2" class="col d-none d-lg-block product-slider" aria-label="Slide 3">
+              <img src="./src/assets/img/image-product-4-thumbnail.jpg" data-bs-target="#carouselIndicators"
+                data-bs-slide-to="3" class="col d-none d-lg-block product-slider" aria-label="Slide 4">
+            </div>
+            <svg class="modal-close" data-bs-toggle="modal" data-bs-target="#exampleModal" width="24" fill="var(--white)" version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 26.8"
+              style="enable-background:new 0 0 25 26.8;" xml:space="preserve">
+              <path class="st0" d="M20.7,1.4l3.8,3.8l-8.2,8.2l8.2,8.2l-3.8,3.8l-8.2-8.2l-8.2,8.2l-3.8-3.8l8.2-8.2L0.5,5.2l3.8-3.8l8.2,8.2
+              	L20.7,1.4z" />
+            </svg>
+            <button class="carousel-control-prev control-prev" type="button" data-bs-target="#carouselIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon modal-prev-icon" aria-hidden="true">
+                <svg class="prev-icon modal-icon" width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+                </svg>
+              </span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next control-next" type="button" data-bs-target="#carouselIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon modal-next-icon" aria-hidden="true">
+                <svg class="next-icon modal-icon" width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+                </svg>
+              </span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
@@ -161,7 +218,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-  <script src="./assets/js/main.js"></script>
+  <script src="./src/assets/js/main.js"></script>
 </body>
 
 </html>

@@ -14,7 +14,7 @@ productBtn.addEventListener('click', onSubmit);
 const cartState = {
     'empty': `<div class="p-5"><p class="cart-empty fw-bold text-center m-0">Your cart is empty.</p></div>`,
     'full': `<div class="d-flex align-items-center justify-content-between mb-4">
-                <img src="./assets/img/image-product-1-thumbnail.jpg" class="card-img d-block" alt="...">
+                <img src="./src/assets/img/image-product-1-thumbnail.jpg" class="card-img d-block" alt="...">
                 <div class="text-start">
                     <h5 class="card-title">${productTitle.textContent}</h5>
                     <div>
@@ -25,7 +25,7 @@ const cartState = {
                     </div>
                 </div>
                 <button class="btn p-0">
-                    <img src="./assets/img/icon-delete.svg" class="card-delete" onclick="deleteProducts()">
+                    <img src="./src/assets/img/icon-delete.svg" class="card-delete" onclick="deleteProducts()">
                 </button>
             </div>
     <a href="#" class="card-btn btn text-white fw-bold w-100 p-3 border-0">Checkout</a>`

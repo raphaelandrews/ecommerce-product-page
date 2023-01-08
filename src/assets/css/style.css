@@ -71,7 +71,8 @@ nav {
     opacity: 1;
 }
 
-.carousel-control-prev-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,13 +83,50 @@ nav {
 }
 
 .carousel-control-next-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding-left: .15rem;
-    border-radius: 50%;
-    background-color: var(--white);
-    background-image: none;
+}
+
+.control-prev {
+    left: -40px;
+    bottom: 124px;
+}
+
+.control-next {
+    right: -40px;
+    bottom: 124px;
+}
+
+.control-prev:hover,
+.control-next:hover {
+    opacity: 1;
+}
+
+.modal-prev-icon,
+.modal-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.modal-icon {
+    width: .75rem !important;
+}
+
+.modal-prev-icon:hover path, 
+.modal-next-icon:hover path {
+    stroke: var(--orange);
+    transition: .3s;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+.modal-close:hover {
+    fill: var(--orange);
+    cursor: pointer;
+    transition: .3s;
 }
 
 .prev-icon,
@@ -235,6 +273,11 @@ nav {
     transition: .3s ease-in;
 }
 
+.modal-content {
+    border: none;
+    background-color: transparent;
+}
+
 /*=============== RESPONSIVE ===============*/
 @media screen and (min-width: 992px) {
     nav {
@@ -297,6 +340,11 @@ nav {
 
     .carousel-inner {
         border-radius: 1rem;
+    }
+
+    .carousel-inner:hover {
+        border-radius: 1rem;
+        cursor: pointer;
     }
 
     .product {
